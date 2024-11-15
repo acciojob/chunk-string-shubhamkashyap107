@@ -1,9 +1,16 @@
 function stringChop(str, size) {
     // your code here
 
+    if(str.length == 0)
+    {
+        return []
+    }
+    if(str.length < size)
+    {
+        return [str]
+    }
     let ans = []
-	    let temp = ""
-
+    let temp = ""
 
     for(let i = 0; i < str.length; i++)
     {
@@ -13,6 +20,10 @@ function stringChop(str, size) {
             ans.push(temp)
             temp = ""
         }
+    }
+    if(temp != "")
+    {
+        ans.push(temp)
     }
 
     return ans
