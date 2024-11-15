@@ -1,29 +1,19 @@
 function stringChop(str, size) {
     // your code here
 
-            if( str == null || str.length == 0)
+    if( str == null || str.length == 0)
     {
         return []
     }
-    if(str.length < size)
-    {
-        return [str]
-    }
-    let ans = []
-    let temp = ""
 
-    for(let i = 0; i < str.length; i++)
+    let ans = []
+    let i = 0
+
+    while(i < str.length)
     {
-        temp += str.charAt(i)
-        if(temp.length == size)
-        {
-            ans.push(temp)
-            temp = ""
-        }
-    }
-    if(temp != "")
-    {
+        let temp = str.slice(i,size + i)
         ans.push(temp)
+        i += size
     }
 
     return ans
