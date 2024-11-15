@@ -2,6 +2,8 @@ function stringChop(str, size) {
     // your code here
 
     let ans = []
+	    let temp = ""
+
 
     for(let i = 0; i < str.length; i++)
     {
